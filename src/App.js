@@ -1,24 +1,78 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
+import About from './components/About';
+import Navbar from './components/Navbar';
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
+import Text from './components/Text';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
 
 function App() {
+
+  
+  // const [alert, setalert]=useState(null)
+  // const showAlert = (massage,type)=>{
+    //   setalert({
+      //     msg : massage,
+      //     type : type
+      //   })
+      // }
+      
+  const [mode, setMode]=useState('light')
+  const [bgColor, setBgColor]=useState('white')
+  const [txtColor,setTxtColor]=useState('black')
+  
+  const darkMode = ()=>{
+    if(mode === 'light'){
+      setMode('dark');
+      document.body.style.backgroundColor='#24074b';
+      
+    }
+    else{
+      setMode('light');
+      document.body.style.backgroundColor='white';
+
+    }
+    if(bgColor==='white'){
+      setBgColor('black');
+    }
+    else{
+      setBgColor('white');
+    }
+    if(txtColor==='black'){
+      setTxtColor('white');
+    }
+    else{
+      setTxtColor('black');
+    }
+    
+  }
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <Navbar mode={mode} darkMode={darkMode}/>
+<Routes>
+    <Route path="/" element={<Text txtColor={txtColor} />}/>
+    <Route  path="/About" element={<About  bgColor={bgColor} txtColor={txtColor}/>}/>
+    <Route path="/SignIn" element={<SignIn bgColor={bgColor} txtColor={txtColor}/>}/>
+    <Route path="/SignUp" element={<SignUp bgColor={bgColor} txtColor={txtColor}/>}/>
+    
+</Routes>
+          
+
+    </BrowserRouter>
+      
+      
+      
+    </>
+
   );
 }
 
