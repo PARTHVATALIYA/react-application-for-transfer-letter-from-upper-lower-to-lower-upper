@@ -19,7 +19,7 @@ export default function SignUp(props) {
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" className="form-control" />
+                      <input type="text" id="form3Example1c" className="form-control" required/>
                       <label className="form-label" htmlFor="form3Example1c">Enter Name</label>
                     </div>
                   </div>
@@ -27,7 +27,7 @@ export default function SignUp(props) {
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="email" id="form3Example3c" className="form-control" />
+                      <input type="email" id="form3Example3c" className="form-control" required/>
                       <label className="form-label" htmlFor="form3Example3c">Enter Email</label>
                     </div>
                   </div>
@@ -35,7 +35,7 @@ export default function SignUp(props) {
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4c" className="form-control" />
+                      <input type="password" id="form3Example4c" className="form-control" required/>
                       <label className="form-label" htmlFor="form3Example4c">Enter Password</label>
                     </div>
                   </div>
@@ -43,7 +43,7 @@ export default function SignUp(props) {
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div className="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4cd" className="form-control" />
+                      <input type="password" id="form3Example4cd" className="form-control" required />
                       <label className="form-label" htmlFor="form3Example4cd">ReEnter password</label>
                     </div>
                   </div>
@@ -56,7 +56,7 @@ export default function SignUp(props) {
                   </div>
 
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" className="btn btn-primary btn-lg">Register</button>
+                    <button type="Submit" className="btn btn-primary btn-lg">Register</button>
                   </div>
 
                 </form>

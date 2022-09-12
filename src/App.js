@@ -30,7 +30,7 @@ function App() {
   const darkMode = ()=>{
     if(mode === 'light'){
       setMode('dark');
-      document.body.style.backgroundColor='#24074b';
+      document.body.style.backgroundColor='rgb(86 78 110)';
       
     }
     else{

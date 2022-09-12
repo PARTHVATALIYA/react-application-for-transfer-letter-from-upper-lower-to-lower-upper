@@ -20,11 +20,11 @@ export default function Text(props) {
 
   return (
    
-    <div className='tab1'>
+    <div className='container'>
         <h1 className={` text-${props.txtColor}`}>Convert text into lowercase and uppercase</h1>
         <textarea name="text" className={`form-control  `} value={Text} placeholder='Enter text' onChange={ChangeOnClick} cols="100" rows="10"></textarea><br />
-        <button type="button" class="btn btn-primary mx-1 my-1" onClick={LowwerCase}>Convert to LowerCase</button>
-        <button type="button" class="btn btn-primary mx-1 my-1" onClick={UpperCase}>Convert to UpperCase</button>
+        <button disabled={Text.length===0} type="button" className="btn btn-primary mx-1 my-1" onClick={LowwerCase}>Convert to LowerCase</button>
+        <button disabled={Text.length===0} type="button" className="btn btn-primary mx-1 my-1" onClick={UpperCase}>Convert to UpperCase</button>
       
       
     </div>
