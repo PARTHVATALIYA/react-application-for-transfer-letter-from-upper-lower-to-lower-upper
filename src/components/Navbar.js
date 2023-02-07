@@ -16,13 +16,13 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className={`nav-link active text-${props.txtColor}`} aria-current="page" to="/About">About Us</Link>
+          <Link className={`nav-link  text-${props.txtColor}`} aria-current="page" to="/About">About Us</Link>
         </li>
         <li className="nav-item">
-          <Link className={`nav-link active text-${props.txtColor}`} to="/SignIn">Sign In</Link>
+          <Link className={`nav-link  text-${props.txtColor}`} to="/SignIn">Sign In</Link>
         </li>
         <li className="nav-item">
-          <Link className={`nav-link active text-${props.txtColor}`} to="/SignUp">Sign Up</Link>
+          <Link className={`nav-link  text-${props.txtColor}`} to="/SignUp">Sign Up</Link>
         </li>
       </ul>
         <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`} >
